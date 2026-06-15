@@ -1,0 +1,27 @@
+{
+  "name": "kumar-portfolio",
+  "version": "1.0.0",
+  "description": "Kumar S Marathe - DevOps & Cloud Engineer Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kumarsm9130/kumar-portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "devops",
+    "cloud-engineer"
+  ],
+  "author": "Kumar S Marathe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kumarsm9130/kumar-portfolio/issues"
+  },
+  "homepage": "https://github.com/kumarsm9130/kumar-portfolio#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
