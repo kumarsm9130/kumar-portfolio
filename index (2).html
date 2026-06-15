@@ -158,8 +158,14 @@ nav{
 .hero-name{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.6rem,1vw,4.8rem);font-weight:700;color:var(--white);line-height:1.05;letter-spacing:-.03em;margin-bottom:.6rem}
 .hero-name .line2{color:var(--blue)}
 .hero-subtitle{font-size:clamp(1rem,2.5vw,1.25rem);color:var(--muted);max-width:580px;margin:.8rem auto 0;line-height:1.75;font-weight:400}
-.hero-typed{color:var(--teal);font-weight:600}
-.hero-actions{display:flex;gap:1rem;justify-content:center;margin-top:2.8rem;flex-wrap:wrap}
+.hero-typed{
+  color:var(--teal);
+  font-weight:600;
+  display:inline-block;
+  width:240px;
+  white-space:nowrap;
+  text-align:center;
+}.hero-actions{display:flex;gap:1rem;justify-content:center;margin-top:2.8rem;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 2rem;border-radius:8px;font-size:.9rem;font-weight:600;text-decoration:none;transition:all .22s;cursor:pointer;border:none}
 .btn-primary{background:var(--blue);color:#fff}
 .btn-primary:hover{background:#2d6fd4;transform:translateY(-1px)}
@@ -209,7 +215,7 @@ section{padding:6.5rem 2rem}
 .section-eyebrow{display:flex;align-items:center;gap:.8rem;margin-bottom:.6rem}
 .eyebrow-line{width:32px;height:2px;background:var(--blue);border-radius:2px}
 .eyebrow-text{font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
-.section-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:var(--white);line-height:1.15;letter-spacing:-.02em;margin-bottom:3.5rem}
+.section-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:var(--white);line-height:1.15;letter-spacing:-.02em;margin-bottom:1.5rem}
 
 /* ── ABOUT ── */
 #about{background:var(--bg2)}
@@ -362,9 +368,13 @@ section{padding:6.5rem 2rem}
 /* ── PROJECTS ── */
 #projects{}
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:1.3rem;perspective:1200px}
-.proj-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;display:flex;flex-direction:column;transition:border-color .35s,box-shadow .35s;transform-style:preserve-3d;will-change:transform;transform:perspective(1200px) rotateX(0deg) rotateY(0deg);position:relative;overflow:visible}
+.proj-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;display:flex;flex-direction:column;transition:border-color .35s, box-shadow .35s, transform .35s;transform-style:preserve-3d;will-change:transform;transform:perspective(1200px) rotateX(0deg) rotateY(0deg);position:relative;overflow:visible}
 .proj-card::before{content:'';position:absolute;inset:0;border-radius:16px;pointer-events:none;box-shadow:0 30px 60px rgba(7,12,20,.6);opacity:0;transition:opacity .35s,filter .35s}
-.proj-card:hover{border-color:var(--blue);}
+.proj-card:hover{
+  border-color:var(--blue);
+  transform:perspective(1200px) rotateX(-5deg) rotateY(5deg) translateY(-10px);
+  box-shadow:0 20px 40px rgba(59,127,232,.25);
+}
 .proj-card.hovering::before{opacity:1;filter:blur(18px)}
 .proj-card .proj-top, .proj-card .proj-title, .proj-card .proj-desc, .proj-card .proj-tech, .proj-card .proj-link{transform:translateZ(0);transition:transform .35s cubic-bezier(.22,.68,0,1.05)}
 .proj-card.hovering .proj-top{transform:translateZ(26px)}
@@ -567,12 +577,17 @@ footer .fl span{color:var(--blue)}
       <li><a href="#hero">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Exp</a></li>
+    <li><a href="#projects">Proj</a></li>
     <li><a href="#certifications">Certs</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="mailto:kumarsmarathe8317399047@gmail.com" class="nav-cta">Resume</a>
+
+  
+<!-- Hire me nav bar at right corner --
+  <a href="mailto:kumarsmarathe8317399047@gmail.com" class="nav-cta">Hire me</a>
+-->
+
 </nav>
 
 <!-- Hero point colour circle particles -->
@@ -587,7 +602,7 @@ footer .fl span{color:var(--blue)}
 <div class="hero-inner">
     <div class="hero-chip">
       <span class="hero-chip-dot"></span>
-      Open to DevOps &amp; Cloud roles · Bangalore &amp; Hyderabad
+       Open to Relocation 
     </div>
 
     <h1 class="hero-name">
@@ -595,25 +610,30 @@ footer .fl span{color:var(--blue)}
     </h1>
 
     <p style="font-family:'Space Grotesk',sans-serif;font-size:clamp(1.1rem,3vw,1.6rem);color:var(--muted);font-weight:500;margin:.5rem 0 0;letter-spacing:.01em">
-      DevOps Engineer &nbsp;|&nbsp; Cloud Infrastructure &nbsp;|&nbsp; CI/CD
+     Exploring AWS Cloud - AI & Emerging Technologies
     </p>
 
-    <p class="hero-subtitle" style="margin-top:1.2rem">
-      I build and automate reliable cloud systems on AWS —<br>
-      pipelines, containers, and everything in between.<br>
-      <span class="hero-typed" id="typed"></span>
+   <p class="hero-subtitle" style="margin-top:1.2rem">
+  Learning, building, and growing with modern technologies..<br>
+  
+</p>
+
+      
+<span class="hero-typed">
+  <span id="typed"></span>
+</span>
     </p>
 
     <div class="hero-actions">
-<a href="#projects" class="btn btn-ghost">View My Work →</a>      
-<a href="#contact" class="btn btn-ghost">Download Resume</a>
-    </div>
+    <a href="#projects" class="btn btn-ghost">View My Work →</a>      
+    <a href="Kumar_resume.pdf" target="_blank" class="btn btn-ghost">Download Resume</a>
+          </div>
 
-    <div class="hero-scroll">
-      <div class="scroll-line"></div>
-    </div>
-</div>
-</section>
+          <div class="hero-scroll">
+            <div class="scroll-line"></div>
+          </div>
+      </div>
+      </section>
 
 
 
@@ -632,37 +652,37 @@ footer .fl span{color:var(--blue)}
         </h2>
 
         <div class="about-text">
-          <p>
-            I am a passionate <strong>DevOps & Cloud Engineer</strong> and a 
-            <strong>recent B.E. Computer Science graduate</strong> from 
-            <strong>Sahyadri College of Engineering & Management, Mangaluru</strong> (graduated May 2026).
-          </p>
+          
+      <p>
+  Passionate about <strong>Cloud Computing (AWS & DevOps)</strong> and emerging technologies such as 
+  <strong>Data Analytics</strong>, <strong>Software Development</strong>, and <strong>AI Ops</strong>.
+</p>
 
-          <p>
-            I specialize in building and automating <strong>cloud infrastructure on AWS</strong> — 
-            designing CI/CD pipelines, containerizing workloads with Docker & Kubernetes, 
-            and making systems observable, reliable, and fast.
-          </p>
+<p>
+  I specialize in building and automating <strong>cloud infrastructure on AWS</strong> — 
+  designing CI/CD pipelines, containerizing workloads with Docker & Kubernetes, 
+  and making systems observable, reliable, and fast.
+</p>
 
-           <p>
-            Beyond infrastructure, I completed a <strong>6-month AI Ops internship at Xtransmatrix</strong>, 
-            working on ML data pipelines, data annotation, data processing, and automation workflows.
-              </p>
-           <p>
-              <strong>Finalist in the AI Innovation Hackathon</strong>, 
-              developing a real-time health monitoring system from concept to deployment.
-              </p>
+<p>
+  Beyond infrastructure, I completed a <strong>6-month AI Ops internship at Xtransmatrix</strong>, 
+  working on ML data pipelines, data annotation, data processing, and automation workflows.
+</p>
+
+<p>
+  <strong>Finalist in the AI Innovation Hackathon</strong>, 
+  developing a real-time health monitoring system from concept to deployment.
+</p>
 
           <p style="color:var(--teal);font-weight:500;font-size:.93rem;margin-top:1.4rem">
-            🎯 Currently seeking entry-level DevOps Engineer and Cloud roles in 
-            Bangalore & Hyderabad.
+            🎯 Currently seeking entry-level AWS DevOps Engineer and Cloud roles 
           </p>
         </div>
 
 
         
         <div class="stats-row">
-          <div class="stat fade-up"><div class="stat-n">4+</div><div class="stat-l">Cloud certificates</div></div>
+          <div class="stat fade-up"><div class="stat-n">4+</div><div class="stat-l">Certificates</div></div>
           <div class="stat fade-up"><div class="stat-n">3+</div><div class="stat-l">End-to-end projects</div></div>
           <div class="stat fade-up"><div class="stat-n">6mo</div><div class="stat-l">Professional internship</div></div>
           <div class="stat fade-up"><div class="stat-n">Top</div><div class="stat-l">Hackathon finalist</div></div>
@@ -700,7 +720,7 @@ footer .fl span{color:var(--blue)}
 
         <div class="av-card fade-up">
           <div class="av-icon">📍</div>
-          <div><div class="av-label">Targeting</div><div class="av-value">Bangalore &amp; Hyderabad — open to relocation</div></div>
+          <div><div class="av-label">Location</div><div class="av-value">Mangaluru</div></div>
         </div>
 
         <div class="av-card fade-up">
@@ -824,7 +844,11 @@ footer .fl span{color:var(--blue)}
         <div class="proj-tech">
           <span class="tag t">Jenkins</span><span class="tag t">Docker</span><span class="tag t">Kubernetes</span><span class="tag">AWS EC2</span><span class="tag">CI/CD</span><span class="tag">Linux</span>
         </div>
-        <a href="#" class="proj-link">View project →</a>
+              <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_NAME"
+   target="_blank"
+   class="proj-link">
+   View project →
+</a>
       </div>
       <div class="proj-card fade-up">
         <div class="proj-top">
@@ -836,7 +860,11 @@ footer .fl span{color:var(--blue)}
         <div class="proj-tech">
           <span class="tag">AWS EC2</span><span class="tag">S3</span><span class="tag">CloudWatch</span><span class="tag">CloudTrail</span><span class="tag">IAM</span>
         </div>
-        <a href="#" class="proj-link">View project →</a>
+       <a href="https://github.com/kumarsm9130/project-aws-server-monitoring.git"
+   target="_blank"
+   class="proj-link">
+   View project →
+</a>
       </div>
       <div class="proj-card fade-up">
         <div class="proj-top">
@@ -848,7 +876,11 @@ footer .fl span{color:var(--blue)}
         <div class="proj-tech">
           <span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">MySQL</span><span class="tag">HTML/CSS/JS</span>
         </div>
-        <a href="#" class="proj-link">View project →</a>
+               <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_NAME"
+   target="_blank"
+   class="proj-link">
+   View project →
+</a>
       </div>
     </div>
   </div>
@@ -858,9 +890,6 @@ footer .fl span{color:var(--blue)}
 
 
    
-
-
-
 
 <!-- HACKATHONS -->
 <section id="hackathons">
@@ -884,7 +913,7 @@ footer .fl span{color:var(--blue)}
           <ul class="hack-li">
             <li>Developed a real-time health monitoring system using IoT sensors, Python, and Azure IoT Hub.</li>
             <li>Integrated SQL Database for structured data storage and built Power BI dashboards for live visualization.</li>
-            <li>Reached the finalist stage from a highly competitive national field, demonstrating end-to-end cloud and IoT expertise.</li>
+            <li>Achieved finalist status by designing and implementing a complete cloud-based IoT solution from concept to deployment.</li>
           </ul>
           <div style="display:flex;flex-wrap:wrap;gap:.45rem">
             <span class="tag">Azure IoT Hub</span><span class="tag">Python</span><span class="tag t">Power BI</span><span class="tag">SQL</span><span class="tag">IoT Sensors</span>
@@ -894,6 +923,8 @@ footer .fl span{color:var(--blue)}
     </div>
   </div>
 </section>
+
+
 
 <!-- CERTIFICATIONS -->
 <section id="certifications">
@@ -929,6 +960,9 @@ footer .fl span{color:var(--blue)}
   </div>
 </section>
 
+
+
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="orb-c"></div>
@@ -939,13 +973,11 @@ footer .fl span{color:var(--blue)}
         <div class="big-text">
           Let's build something<br><span>great together.</span>
         </div>
-        <p>I'm actively seeking entry-level <strong style="color:var(--white)">DevOps Engineer</strong> , <strong style="color:var(--white)">Cloud Infrastructure</strong> , <strong style="color:var(--white)">
-        </strong> roles in Bangalore &amp; Hyderabad. Have an have an opening, internship, or project? </p>
+<p>
+
+        <p>Have an opening, internship, or project? </p>
         <p>Feel free to reach out.</p>
-        <div class="status-pill">
-          <span class="status-dot"></span>
-          Available for full-time roles
-        </div>
+        
       </div>
       <div class="contact-right fade-up">
         <a href="mailto:kumarsmarathe8317399047@gmail.com" class="contact-card">
@@ -974,10 +1006,12 @@ footer .fl span{color:var(--blue)}
         </a>
         <div class="contact-divider">or find me on</div>
         <div class="social-row">
-          <a href="https://github.com" target="_blank" class="social-btn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            GitHub
-          </a>
+          <a href="https://github.com/kumarsm9130?tab=repositories" target="_blank" class="social-btn">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+  </svg>
+  GitHub
+</a>
 
 
       <!-- Linkedin
@@ -989,32 +1023,39 @@ footer .fl span{color:var(--blue)}
 </a>
     Linkedin-->
 
+
+
+    
         </div>
       </div>
     </div>
   </div>
 </section>
 
+
+
+
 <!-- FOOTER -->
 <footer>
   <!-- footer 
    <div class="fl">Kumar<span>.</span></div>
   footer -->
-  <div>Designed &amp; built by Kumar S Marathe · 2026</div>
+  <div>© 2026 Kumar S Marathe. All rights reserved.</div>
   <!-- footer 
   <div>Open to work in Bangalore &amp; Hyderabad</div>
 </footer>
 -->
 
 <script>
+
+
 // ── Typed hero ──
 const phrases=[
-  'DevOps Engineer',
-  'AWS Cloud Engineer',
-  'CI/CD Automation',
-  'Docker & Kubernetes',
-  'Linux Administrator',
-  'Open to Work'
+  'AWS Cloud',
+  'Data Analytics',
+  'AI Ops',
+  'Software Development',
+
 ];let pi=0,ci=0,del=false;
 const tel=document.getElementById('typed');
 function tick(){
@@ -1087,6 +1128,24 @@ if (window.scrollY < 100) {
     a.classList.toggle('active',href===cur);
   });
 },{passive:true});
+
+</script>
+<script>
+const aboutText = "I'm Kumar S Marathe";
+const aboutTarget = document.getElementById("about-typed");
+
+let aboutIndex = 0;
+
+function typeAbout() {
+  if (aboutIndex < aboutText.length) {
+    aboutTarget.textContent += aboutText.charAt(aboutIndex);
+    aboutIndex++;
+    setTimeout(typeAbout, 100);
+  }
+}
+
+typeAbout();
+
 
 </script>
 
